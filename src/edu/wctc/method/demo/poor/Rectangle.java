@@ -20,7 +20,7 @@ public class Rectangle {
 
     public void setLength(double length) {
         if (length < 0) {
-            throw new IllegalArgumentException(" leng nnth cannot be negative");
+            throw new IllegalArgumentException(" length cannot be negative");
         }
         this.length = length;
     }
