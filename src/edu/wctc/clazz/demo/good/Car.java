@@ -7,7 +7,7 @@ package edu.wctc.clazz.demo.good;
  *
  * @author Jim Lombardo
  */
-public class Car
+public class Car{
     // This is good composition -- the engine object is a component of the Car object
     // It's used correctly here. Car delegates to Engine. The Engine itself
     // and its functions are hidden from the Startup class (or any other class),
