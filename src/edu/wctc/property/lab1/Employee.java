@@ -15,7 +15,7 @@ public class Employee {
 
     public String firstName;
     public String lastName;
-    public final String ssn;
+    private String ssn;
     public boolean metWithHr;
     public boolean metDeptStaff;
     public boolean reviewedDeptPolicies;
@@ -25,15 +25,71 @@ public class Employee {
 
 
 
-    public Employee(String firstName, String lastName, String cubeId, String ssn) {
-        if (ssn.length() < 9 || ssn.length() > 9) {
-            throw new IllegalArgumentException("Invalid entry. Your SSN should be 9 numbers.");
+    public Employee(String firstName, String lastName, String ssn, int cubeId) {
+
+        if(ssn.length() != 9){
+            throw new IllegalArgumentException("This is whack");
         }
+
         this.firstName = firstName;
         this.lastName = lastName;
-        this.ssn = ssn;
-        this.cubeId = cubeId;
+
+        this.metWithHr = false;
+        this.metDeptStaff = false;
+        this.reviewedDeptPolicies = false;
+        this.movedIn = false;
 
     }
 
+    //ways to turn booleans true
+    public void didHrMeeting(){
+        metWithHr = true;
+    }
+    public void didDSMeeting(){
+        metDeptStaff = true;
+    }
+    public void reviewPolicies(){
+        reviewedDeptPolicies = true;
+    }
+    public void movedBelongings(){
+        movedIn = true;
+    }
+
+
+
+
+
+    //setters and getters
+
+    public LocalDate getOrientationDate() {
+        return orientationDate;
+    }
+
+    public void setOrientationDate(LocalDate orientationDate) {
+        this.orientationDate = orientationDate;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
 }

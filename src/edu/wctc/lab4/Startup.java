@@ -12,9 +12,9 @@ package edu.wctc.lab4;
 public class Startup {
 
     public static void main(String[] args) {
-        Employee employee = new Employee("Peter", "Piper", "333-33-3333");
+        Employee employee = new Employee("David", "Evans", "987-65-4321");
 
-        employee.doFirstTimeOrientation("A101");
+        employee.doFirstTimeOrientation("M007");
         employee.printReport();
     }
 
